@@ -21,7 +21,10 @@ services:
     image: ossrs/srs:encoder
     container_name: ${APP_NAME}-ffmpeg
     restart: always
-  
+    environment:
+      - SOURCE=./src/flv/source.flv
+      - URL=rtmp://${APP_URL}/live/livestream
+      
 networks:
   default:
     name: ${APP_NETWORK}
