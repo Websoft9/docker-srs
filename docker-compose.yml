@@ -16,16 +16,6 @@ services:
       - '8000:8000'
     environment:
       - CANDIDATE=${APP_URL}
-
-  ffmpeg:
-    image: ossrs/srs:encoder
-    container_name: ${APP_NAME}-ffmpeg
-    restart: always
-    environment:
-      - SOURCE=/usr/local/srs/objs/ffmpeg/source.flv
-      - URL=rtmp://${APP_URL}/live/livestream
-    volumes:
-      - ./src/flv/source.flv:/usr/local/srs/objs/ffmpeg/source.flv
       
 networks:
   default:
