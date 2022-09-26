@@ -1,5 +1,5 @@
-# image: https://hub.docker.com/r/bitnami/suitecrm
-# docs: https://github.com/bitnami/bitnami-docker-suitecrm
+# image: https://hub.docker.com/r/ossrs/srs
+# docs: https://ossrs.net/lts/zh-cn/docs/v4/doc/getting-started
 
 version: '3.8'
 
